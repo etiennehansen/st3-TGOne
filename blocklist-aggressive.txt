@@ -1,0 +1,11 @@
+! LTV aggressive blocklist. Add on top of blocklist.txt only if you accept breakage.
+! lgtvsdp / nextlgsdp / lgtvcommon: LG service platform. Breaks LG Content Store, home-row content, some app logins.
+||lgtvsdp.com^
+||nextlgsdp.com^
+||lgtvcommon.com^
+! lgthinq / lgtviot: ThinQ cloud. Breaks the ThinQ phone app and voice remote features.
+||lgthinq.com^
+||lgtviot.com^
+! snu.lge.com: firmware updates. Blocking stops LG security patches. Only block if the TV is rooted
+! and you need to keep the exploit unpatched.
+||snu.lge.com^

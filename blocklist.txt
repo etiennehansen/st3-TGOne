@@ -1,0 +1,7 @@
+! LTV core blocklist: LG ads + ACR (viewing-data capture).
+! Format: Adblock-style, subdomains included. Works as a Pi-hole v6 / AdGuard Home adlist.
+! Safe tier: TV, apps, app store and firmware updates keep working.
+||lgsmartad.com^
+||lgad.cjpowercast.com^
+||ngfts.lge.com^
+||alphonso.tv^
