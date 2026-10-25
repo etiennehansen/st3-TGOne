@@ -60,7 +60,7 @@ sha256 hashes come from upstream unchanged, and non-HTTPS packages are dropped.
 npx wrangler@latest deploy
 ```
 
-In Homebrew Channel > Settings, add `https://st3-tgone.<your-subdomain>.workers.dev/apps.json`
+In Homebrew Channel > Settings, add `https://st3tg1.shansen-563.workers.dev/apps.json`
 as a repository. To show only the curated apps, also turn off the default repository.
 Edit `ALLOW` and redeploy to change the list. Test with `node worker.test.mjs`.
 
