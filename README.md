@@ -49,6 +49,21 @@ Before you try it:
   security patches, ever. A rooted TV with unpatched firmware should go on an isolated VLAN.
 - For apps alone, Developer Mode is enough, no root needed. See https://www.webosbrew.org/rooting.
 
+### App updates: curated Homebrew repo (Cloudflare Worker)
+
+`worker.js` serves a Homebrew Channel repository containing only the apps listed in `ALLOW`,
+pulled live from repo.webosbrew.org (cached 1 hour). When upstream ships a new version,
+Homebrew Channel offers the update. The Worker filters only: manifests, download URLs and
+sha256 hashes come from upstream unchanged, and non-HTTPS packages are dropped.
+
+```bash
+npx wrangler@latest deploy
+```
+
+In Homebrew Channel > Settings, add `https://st3-tgone.<your-subdomain>.workers.dev/apps.json`
+as a repository. To show only the curated apps, also turn off the default repository.
+Edit `ALLOW` and redeploy to change the list. Test with `node worker.test.mjs`.
+
 ## Legal lever: CCPA
 
 Blocking stops new collection. `ccpa-request.md` asks LG to opt you out of sale/sharing, tell
